@@ -1,5 +1,6 @@
-package Entity;
+package Entity.Impl;
 
+import Entity.Plane;
 import lombok.Data;
 
 import java.util.Collections;

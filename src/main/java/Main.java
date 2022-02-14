@@ -5,7 +5,7 @@
 import DAO.IDAOFactory;
 import DAO.impl.DAOFactory;
 import DAO.impl.PlaneDAO;
-import Entity.AirCompany;
+import Entity.Impl.AirCompany;
 
 public class Main {
     public static void main(String[] args) {

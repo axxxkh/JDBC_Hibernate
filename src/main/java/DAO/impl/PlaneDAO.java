@@ -1,8 +1,8 @@
 package DAO.impl;
 
 import DAO.IDAOPlane;
-import Entity.CargoPlane;
-import Entity.PassengerPlane;
+import Entity.Impl.CargoPlane;
+import Entity.Impl.PassengerPlane;
 import Entity.Plane;
 import configuration.Connector;
 

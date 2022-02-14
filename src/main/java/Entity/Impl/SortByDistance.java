@@ -1,4 +1,6 @@
-package Entity;
+package Entity.Impl;
+
+import Entity.Plane;
 
 import java.util.Comparator;
 
