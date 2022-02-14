@@ -5,12 +5,19 @@
 import DAO.IDAOFactory;
 import DAO.impl.DAOFactory;
 import DAO.impl.PlaneDAO;
+import Entity.AirCompany;
 
 public class Main {
     public static void main(String[] args) {
         IDAOFactory factory = DAOFactory.getInstance();
         PlaneDAO planeDAO = factory.getPlaneDAO();
-        planeDAO.getAllCargoPlanes().stream().forEach(System.out::println);
-
+        AirCompany company = new AirCompany();
+        company.setPlanes(planeDAO.getAllCargoPlanes());
+        System.out.println(company.toString());
+        company.sortByDistance();
+        company.getPlanes().stream().forEach(x->System.out.println(x.getFlyingDistance()));
+        System.out.println(company.findByConsumption(100, 2000));
+        System.out.println(company);
+        System.out.println(company.getTotalLoadCapacity());
     }
 }

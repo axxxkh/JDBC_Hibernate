@@ -16,6 +16,6 @@ public abstract class Plane implements FlyingDistance {
 
     @Override
     public double getFlyingDistance() {
-        return fuelTankCapacity / fuelConsumptionByOneMile;
+        return this.fuelTankCapacity / this.fuelConsumptionByOneMile;
     }
 }

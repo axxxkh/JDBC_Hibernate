@@ -5,16 +5,18 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Connector {
-    private final String URL ="jdbc:mysql://localhost:3306/SkyLine";
+    private final String URL = "jdbc:mysql://localhost:3306/SkyLine";
     private final String LOGIN = "root";
-    private final String Password="11111111";
+    private final String PASSWORD = "!!!!!!!!";
+    private Connection connection = null;
 
-    public  Connection getConnection() {
-        try (Connection connection = DriverManager.getConnection(URL, LOGIN, Password)) {
-            return connection;
+    public Connection getConnection() {
+        try {
+            connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
+            System.out.println("successfully connected");
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
-        return null;
+        return connection;
     }
 }
