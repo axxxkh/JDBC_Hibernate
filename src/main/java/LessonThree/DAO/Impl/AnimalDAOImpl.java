@@ -43,11 +43,14 @@ public class AnimalDAOImpl implements AnimalDAO {
     public boolean delete(Animal animal) {
         Session session = getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        session.find(Animal.class, animal);
-        session.delete(animal);
-        transaction.commit();
-        session.close();
-        return true;
+        Animal persistence = session.load(Animal.class, animal.getId());
+        if (persistence != null) {
+            session.delete(persistence);
+            transaction.commit();
+            session.close();
+            return true;
+        }
+        return false;
     }
 
     @Override

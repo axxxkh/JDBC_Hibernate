@@ -12,7 +12,10 @@ public class Main {
                 .name("Boss")
                 .age(8)
                 .build();
-        animalDAO.add(doggy);
+//        animalDAO.add(doggy);
+//        doggy.setAge(10);
+//        animalDAO.update(doggy);
+        animalDAO.delete(doggy);
         System.out.println(animalDAO.get(2));
     }
 }
