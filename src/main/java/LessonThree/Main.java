@@ -9,6 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
         Animal doggy = Animal.builder()
+                .id(5)
                 .name("Boss")
                 .age(8)
                 .build();
