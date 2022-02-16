@@ -1,10 +1,10 @@
-package LessonTwo.DAO;
+package LessonThree.DAO;
 
-import LessonTwo.Entity.Animal;
+import LessonThree.Entity.Animal;
 
 public interface AnimalDAO {
     Animal add(Animal animal);
     Animal update (Animal animal);
     boolean delete (Animal animal);
-    Animal get ()
+    Animal get (int id);
 }
